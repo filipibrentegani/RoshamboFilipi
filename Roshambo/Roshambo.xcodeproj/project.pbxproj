@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		CC3096782151C13300C20CFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3096772151C13300C20CFA /* AppDelegate.swift */; };
-		CC30967A2151C13300C20CFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3096792151C13300C20CFA /* ViewController.swift */; };
+		CC30967A2151C13300C20CFA /* PlayGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3096792151C13300C20CFA /* PlayGameViewController.swift */; };
 		CC30967D2151C13300C20CFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC30967B2151C13300C20CFA /* Main.storyboard */; };
 		CC30967F2151C13400C20CFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC30967E2151C13400C20CFA /* Assets.xcassets */; };
 		CC3096822151C13400C20CFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC3096802151C13400C20CFA /* LaunchScreen.storyboard */; };
+		CC30968A2151C35200C20CFA /* ResultGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3096892151C35200C20CFA /* ResultGameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CC3096742151C13300C20CFA /* Roshambo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roshambo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC3096772151C13300C20CFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CC3096792151C13300C20CFA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CC3096792151C13300C20CFA /* PlayGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayGameViewController.swift; sourceTree = "<group>"; };
 		CC30967C2151C13300C20CFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CC30967E2151C13400C20CFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC3096812151C13400C20CFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC3096832151C13400C20CFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC3096892151C35200C20CFA /* ResultGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultGameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +57,8 @@
 			isa = PBXGroup;
 			children = (
 				CC3096772151C13300C20CFA /* AppDelegate.swift */,
-				CC3096792151C13300C20CFA /* ViewController.swift */,
+				CC3096792151C13300C20CFA /* PlayGameViewController.swift */,
+				CC3096892151C35200C20CFA /* ResultGameViewController.swift */,
 				CC30967B2151C13300C20CFA /* Main.storyboard */,
 				CC30967E2151C13400C20CFA /* Assets.xcassets */,
 				CC3096802151C13400C20CFA /* LaunchScreen.storyboard */,
@@ -135,7 +138,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC30967A2151C13300C20CFA /* ViewController.swift in Sources */,
+				CC30968A2151C35200C20CFA /* ResultGameViewController.swift in Sources */,
+				CC30967A2151C13300C20CFA /* PlayGameViewController.swift in Sources */,
 				CC3096782151C13300C20CFA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

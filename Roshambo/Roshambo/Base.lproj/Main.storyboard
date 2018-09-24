@@ -1,24 +1,225 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Play Game View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="PlayGameViewController" customModule="Roshambo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1ho-Wu-ceB">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dow-MA-JbO">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNu-R5-0fZ" userLabel="Rock Button">
+                                                <rect key="frame" x="110.5" y="30" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="fGg-e5-m33"/>
+                                                    <constraint firstAttribute="height" constant="100" id="ycW-ps-JPx"/>
+                                                </constraints>
+                                                <state key="normal" image="rock"/>
+                                                <connections>
+                                                    <action selector="rockButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UxQ-EQ-ote"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="dNu-R5-0fZ" firstAttribute="centerY" secondItem="dow-MA-JbO" secondAttribute="centerY" id="1bH-gn-jPv"/>
+                                            <constraint firstItem="dNu-R5-0fZ" firstAttribute="centerX" secondItem="dow-MA-JbO" secondAttribute="centerX" id="lOR-9j-ZwI"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Su2-wy-XEV">
+                                        <rect key="frame" x="0.0" y="160" width="320" height="160"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hU0-YI-Xx6" userLabel="Paper Button">
+                                                <rect key="frame" x="110.5" y="30.5" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="8rO-z2-9LG"/>
+                                                    <constraint firstAttribute="width" constant="100" id="hs9-bW-QH9"/>
+                                                </constraints>
+                                                <state key="normal" image="paper"/>
+                                                <connections>
+                                                    <action selector="paperButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iQe-X9-HbI"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="hU0-YI-Xx6" firstAttribute="centerX" secondItem="Su2-wy-XEV" secondAttribute="centerX" id="HPE-8U-yTH"/>
+                                            <constraint firstItem="hU0-YI-Xx6" firstAttribute="centerY" secondItem="Su2-wy-XEV" secondAttribute="centerY" id="wu6-F6-QWT"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fCx-e7-3yV">
+                                        <rect key="frame" x="0.0" y="320" width="320" height="160"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sLh-Pz-uKW" userLabel="Scissors Button">
+                                                <rect key="frame" x="110.5" y="30.5" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="JIA-I8-CB5"/>
+                                                    <constraint firstAttribute="width" constant="100" id="Q5d-vM-YrG"/>
+                                                </constraints>
+                                                <state key="normal" image="scissors"/>
+                                                <connections>
+                                                    <segue destination="h1n-FQ-uzK" kind="show" identifier="ScissorsSegway" id="1wi-7n-0MY"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="sLh-Pz-uKW" firstAttribute="centerX" secondItem="fCx-e7-3yV" secondAttribute="centerX" id="m4N-j2-Cwc"/>
+                                            <constraint firstItem="sLh-Pz-uKW" firstAttribute="centerY" secondItem="fCx-e7-3yV" secondAttribute="centerY" id="nXf-6Q-dD3"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1ho-Wu-ceB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6Zc-2B-20T"/>
+                            <constraint firstItem="1ho-Wu-ceB" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ATa-Ph-nQ2"/>
+                            <constraint firstItem="1ho-Wu-ceB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="bWQ-zT-6fK"/>
+                            <constraint firstItem="1ho-Wu-ceB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="cjg-wE-Oc4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="h1n-FQ-uzK" kind="show" identifier="PlaySegway" id="YMS-Kd-lcd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139" y="134"/>
+        </scene>
+        <!--Result Game View Controller-->
+        <scene sceneID="Ds1-sE-du3">
+            <objects>
+                <viewController storyboardIdentifier="ResultGameViewController" id="h1n-FQ-uzK" customClass="ResultGameViewController" customModule="Roshambo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AYy-Ph-99e">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0f-cQ-q53" userLabel="Result Label">
+                                <rect key="frame" x="24" y="44" width="272" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="lEe-WM-51t"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="MjF-8Q-BhA">
+                                <rect key="frame" x="0.0" y="68" width="320" height="324"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W8m-S8-Rg9">
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="324"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R8F-Yh-zX7" userLabel="Machine Image View">
+                                                <rect key="frame" x="16" y="98.5" width="128" height="128"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="128" id="DpH-Lt-WCc"/>
+                                                    <constraint firstAttribute="width" constant="128" id="SDb-TH-0ZG"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Machine Play" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O6x-OF-fMQ" userLabel="Image Machine Label">
+                                                <rect key="frame" x="24" y="100.5" width="91" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="O6x-OF-fMQ" firstAttribute="top" secondItem="R8F-Yh-zX7" secondAttribute="top" constant="2" id="Ja0-iE-wDt"/>
+                                            <constraint firstItem="O6x-OF-fMQ" firstAttribute="leading" secondItem="R8F-Yh-zX7" secondAttribute="leading" constant="8" id="OMg-8E-MGQ"/>
+                                            <constraint firstItem="R8F-Yh-zX7" firstAttribute="centerY" secondItem="W8m-S8-Rg9" secondAttribute="centerY" id="fUj-pt-iuD"/>
+                                            <constraint firstItem="R8F-Yh-zX7" firstAttribute="centerX" secondItem="W8m-S8-Rg9" secondAttribute="centerX" id="y3C-Tj-MCd"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O2Q-vD-MTa">
+                                        <rect key="frame" x="160" y="0.0" width="160" height="324"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ya5-5i-Of5" userLabel="Player Image View">
+                                                <rect key="frame" x="16" y="98.5" width="128" height="128"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="128" id="Dvx-BG-vPy"/>
+                                                    <constraint firstAttribute="height" constant="128" id="WpT-aa-ch6"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Play" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4do-6F-oKj" userLabel="Image Player Label">
+                                                <rect key="frame" x="24" y="100.5" width="63.5" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="4do-6F-oKj" firstAttribute="top" secondItem="Ya5-5i-Of5" secondAttribute="top" constant="2" id="0A1-FZ-l0T"/>
+                                            <constraint firstItem="Ya5-5i-Of5" firstAttribute="centerY" secondItem="O2Q-vD-MTa" secondAttribute="centerY" id="H9h-O6-b0e"/>
+                                            <constraint firstItem="4do-6F-oKj" firstAttribute="leading" secondItem="Ya5-5i-Of5" secondAttribute="leading" constant="8" id="RbU-8M-EfP"/>
+                                            <constraint firstItem="Ya5-5i-Of5" firstAttribute="centerX" secondItem="O2Q-vD-MTa" secondAttribute="centerX" id="eH0-1H-n1r"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bxq-px-6rx" userLabel="Play Again Button">
+                                <rect key="frame" x="24" y="392" width="272" height="64"/>
+                                <color key="backgroundColor" red="0.95294117649999999" green="0.91372549020000005" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="PdG-Ju-YJU"/>
+                                </constraints>
+                                <state key="normal" title="Jogar Novamente"/>
+                                <connections>
+                                    <action selector="playAgainButtonClicked:" destination="h1n-FQ-uzK" eventType="touchUpInside" id="rIo-9L-uwk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="w8l-zK-9vP" firstAttribute="trailing" secondItem="Bxq-px-6rx" secondAttribute="trailing" constant="24" id="00v-ak-oq6"/>
+                            <constraint firstItem="w8l-zK-9vP" firstAttribute="trailing" secondItem="MjF-8Q-BhA" secondAttribute="trailing" id="2Cq-Ci-5Do"/>
+                            <constraint firstItem="t0f-cQ-q53" firstAttribute="leading" secondItem="w8l-zK-9vP" secondAttribute="leading" constant="24" id="4fe-he-VAO"/>
+                            <constraint firstItem="Bxq-px-6rx" firstAttribute="leading" secondItem="w8l-zK-9vP" secondAttribute="leading" constant="24" id="JJF-MY-caJ"/>
+                            <constraint firstItem="w8l-zK-9vP" firstAttribute="trailing" secondItem="t0f-cQ-q53" secondAttribute="trailing" constant="24" id="KtI-Ej-Abt"/>
+                            <constraint firstItem="w8l-zK-9vP" firstAttribute="bottom" secondItem="Bxq-px-6rx" secondAttribute="bottom" constant="24" id="bYj-YV-noV"/>
+                            <constraint firstItem="t0f-cQ-q53" firstAttribute="top" secondItem="w8l-zK-9vP" secondAttribute="top" constant="24" id="hu0-7I-bVr"/>
+                            <constraint firstItem="Bxq-px-6rx" firstAttribute="top" secondItem="MjF-8Q-BhA" secondAttribute="bottom" id="or2-JN-dj4"/>
+                            <constraint firstItem="MjF-8Q-BhA" firstAttribute="top" secondItem="t0f-cQ-q53" secondAttribute="bottom" id="srM-VR-82C"/>
+                            <constraint firstItem="MjF-8Q-BhA" firstAttribute="leading" secondItem="w8l-zK-9vP" secondAttribute="leading" id="u6k-zi-76Y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="w8l-zK-9vP"/>
+                    </view>
+                    <connections>
+                        <outlet property="machineImageView" destination="R8F-Yh-zX7" id="t7Q-YT-Tne"/>
+                        <outlet property="playerImageView" destination="Ya5-5i-Of5" id="JOR-fp-quC"/>
+                        <outlet property="resultLabel" destination="t0f-cQ-q53" id="9xI-yc-Ciy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R1Y-0X-fSD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="990" y="133.75"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="paper" width="75" height="65"/>
+        <image name="rock" width="75" height="65"/>
+        <image name="scissors" width="75" height="65"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="1wi-7n-0MY"/>
+    </inferredMetricsTieBreakers>
 </document>
